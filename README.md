@@ -77,15 +77,4 @@ pytest
 - **Схема БД.** Для компактности тестового задания таблица создаётся через SQLAlchemy `create_all` при старте API. Для production следует добавить Alembic миграции и отдельную команду миграции перед развёртыванием.
 - **Повторные попытки.** Celery повторяет задачу при непредвиденной ошибке. Ошибки по отдельным тикерам логируются, чтобы частичный сбой не терял успешную цену другого инструмента.
 
-## Публикация в GitLab
 
-Создайте пустой проект в GitLab, затем из этой папки выполните команды, подставив URL своего проекта:
-
-```bash
-git init
-git add .
-git commit -m "Implement Deribit price collector and API"
-git branch -M main
-git remote add origin <gitlab-project-url>
-git push -u origin main
-```
